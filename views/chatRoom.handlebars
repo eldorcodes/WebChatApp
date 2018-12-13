@@ -1,0 +1,60 @@
+<div class="container">
+    <h4>Chat Room</h4>
+
+    <div id="conversation">
+        {{#each message}}
+        {{#each chats}}
+
+        {{#if senderMessage}}
+        <div class="col s12 m2 offset-m2 l6 offset-l3">
+            <div class="card-panel lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s2">
+                        <img src="{{senderName.image}}"
+                         class="circle responsive-img"> 
+                    </div>
+                    <div class="col s10">
+                        <span class="black-text">
+                            {{senderMessage}}
+                        </span>
+                        <br>
+                        <small>{{date}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        {{/if}}
+
+        <br>
+
+        {{#if receiverMessage}}
+        <div class="col s12 m2 offset-m2 l6 offset-l3">
+            <div class="card-panel lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s2">
+                        <img src="{{receiverName.image}}" 
+                        class="circle responsive-img"> 
+                    </div>
+                    <div class="col s10">
+                        <span class="black-text">
+                            {{receiverMessage}}
+                        </span>
+                        <br>
+                        <small>{{date}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        {{/if}}
+
+        {{/each}}
+        {{/each}}
+    </div>
+
+    <form action="/chat/{{message._id}}" method="POST">
+    <input type="text" name="message" placeholder="Type message ...">
+    <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+</div>

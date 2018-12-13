@@ -1,0 +1,18 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Messenger</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {{#if user}}
+                <li><a href="/users"><i class="material-icons">group</i></a></li>
+                <li><a href="/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/about">About</a></li>
+                <li><a href="/inbox">Inbox</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                {{/if}}
+    
+            </ul>
+        </div>
+    </nav>
+</div>

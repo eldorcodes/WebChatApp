@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m3">
+            {{#each users}}
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{image}}">
+                    <span class="card-title">{{fullname}}</span>
+                </div>
+                <div class="card-action">
+                    <a href="/startChat/{{_id}}"><button class="btn btn-primary">
+                        Chat <i class="material-icons right">send</i>
+                    </button></a>
+                </div>
+            </div>
+            {{else}}
+            <p>No users found ..</p>
+            {{/each}}
+        </div>
+    </div>
+</div>
