@@ -16,7 +16,7 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
         clientID: keys.GoogleClientID,
         clientSecret: keys.GoogleClientSecret,
-        callbackURL: "http://localhost:3000/auth/google/callback"
+        callbackURL: "https://arcane-beach-16647.herokuapp.com/auth/google/callback"
     },
     function (accessToken, refreshToken, profile, done) {
         console.log(profile);
