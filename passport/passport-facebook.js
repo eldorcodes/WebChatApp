@@ -17,7 +17,7 @@ passport.use(new FacebookStrategy({
         clientID: keys.FacebookAppID,
         clientSecret: keys.FacebookAppSecret,
         profileFields: ['email','displayName','photos'],
-        callbackURL: "http://localhost:3000/auth/facebook/callback",
+        callbackURL: "https://arcane-beach-16647.herokuapp.com/auth/facebook/callback",
         proxy:true
     },
     function (accessToken, refreshToken, profile, done) {
